@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saved Images</title>
+    <link rel="stylesheet"  type="text/css" href="{{url_for('.static', filename='style.css')}}">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="navbar-nav left">
+          <a class="nav-item nav-link" id="home" href="/">Doodle</a>
+          <a class="nav-item nav-link" id="images" href="/display-images">My Images</a>
+        </div>
+    </nav>
+    <div class="row">
+        {% for image_name in image_names %}
+            <div class="image-pair">
+                <img src="{{ url_for('static', filename='saved_images/' + image_name) }}" alt="{{ image_name }}">
+                <img src="{{ url_for('static', filename='saved_charts/' + image_name) }}" alt="{{ image_name }}">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+body, .container {
+  margin: 0;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  background-color: #343a40;
+  color: white;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 0;
+}
+.navbar .left,
+.navbar .center,
+.navbar .right {
+  display: flex;
+  align-items: center;  /* Added this line */
+}      
+.navbar .left {
+  display: flex;
+  flex: 1;
+}
+.navbar .center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.navbar .right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#chartContainer {
+  position: fixed;
+  top: 20;
+  right: 0;
+  width: 30%;
+  height: 50%;
+  pointer-events: none;
+}
+#canvas {
+  cursor: crosshair;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn {
+  margin: 0px 10px;
+  padding: 10px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn:active {
+  background-color: gray;
+}
+.btn-warning {
+  background-color: #ffc107;
+}
+.btn-success {
+  background-color: #28a745;
+}
+.btn-success:active {
+  background-color: #1c7430; /* Change to desired color */
+}
+.btn-info {
+  background-color: #17a2b8;
+}
+.bottom-navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(134, 190, 224, 0.5);
+  padding: 10px 0;
+  pointer-events: none;
+}
+.bottom-navbar > * {
+  pointer-events: auto; /* This allows the navbar's children to still receive click events */
+}    
+.bottom-navbar button {
+  border-radius: 5px;
+  padding: 20px; /* Increase padding to make buttons bigger */
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+.slider-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slider-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}  
+.slider {
+  width: 200px;
+  margin: 20px 20px;
+}
+.flash-message {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  background-color: #4CAF50;
+  padding: 15px;
+  border-radius: 5px;
+}
+.dismiss-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.image-pair {
+  margin: 10px;
+}
